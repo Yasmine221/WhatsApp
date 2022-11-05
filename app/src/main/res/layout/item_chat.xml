@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_15ssp"
+    android:paddingHorizontal="@dimen/_15ssp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_user"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck"
+        tools:src="@color/black">
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/img_user"
+        app:layout_constraintBottom_toBottomOf="@id/img_user"
+        app:layout_constraintStart_toEndOf="@id/img_user"
+        android:layout_marginStart="@dimen/_12ssp"
+        android:layout_marginBottom="@dimen/_30ssp"
+        tools:text="username"
+        android:textSize="@dimen/_14ssp"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-black">
+    </com.google.android.material.textview.MaterialTextView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/user_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/img_user"
+        app:layout_constraintBottom_toBottomOf="@id/img_user"
+        app:layout_constraintStart_toEndOf="@id/img_user"
+        android:layout_marginTop="@dimen/_20ssp"
+        android:layout_marginStart="@dimen/_12ssp"
+        android:textSize="@dimen/_12ssp"
+        tools:text="Hey there,I'm using WhatsApp!">
+
+    </com.google.android.material.textview.MaterialTextView>
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2ssp"
+        app:layout_constraintTop_toTopOf="@id/img_user"
+        android:layout_marginTop="@dimen/_55ssp"
+        android:background="#EFEFEF">
+
+
+    </View>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

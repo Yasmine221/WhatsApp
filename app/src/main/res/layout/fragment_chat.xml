@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ChatFragment">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/item_chat">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floating_btn"
+        android:layout_width="@dimen/_55ssp"
+        android:layout_height="@dimen/_55ssp"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/_16ssp"
+        android:backgroundTint="#24D467"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_baseline_message_24"
+        app:fabCustomSize="@dimen/_55sdp"
+        app:maxImageSize="@dimen/_23sdp"
+        app:tint="@color/white"
+        tools:ignore="ImageContrastCheck"
+        android:clickable="true"
+        android:focusable="true"
+        app:borderWidth="0dp">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+</FrameLayout>
