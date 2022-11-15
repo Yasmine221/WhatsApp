@@ -3,18 +3,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".CallsFragment">
 
-   <com.google.android.material.textview.MaterialTextView
-       android:id="@+id/status_text"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:text="CALLS"
-       android:textSize="@dimen/_28ssp"
-       android:layout_marginTop="@dimen/_200sdp"
-       android:layout_marginStart="@dimen/_100sdp">
 
-   </com.google.android.material.textview.MaterialTextView>
+
+   <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/call_recyclerview"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+      tools:listitem="@layout/item_calls_layout">
+   </androidx.recyclerview.widget.RecyclerView>
+
+   <com.google.android.material.floatingactionbutton.FloatingActionButton
+       android:id="@+id/floating_btn"
+       android:layout_width="@dimen/_55ssp"
+       android:layout_height="@dimen/_55ssp"
+       android:layout_gravity="bottom|end"
+       android:layout_margin="@dimen/_16ssp"
+       android:backgroundTint="#24D467"
+       android:contentDescription="@string/app_name"
+       android:src="@drawable/ic_baseline_add_ic_call_24"
+       app:fabCustomSize="@dimen/_55sdp"
+       app:maxImageSize="@dimen/_25sdp"
+       app:tint="@color/white"
+       tools:ignore="ImageContrastCheck"
+       android:clickable="true"
+       android:focusable="true"
+       app:borderWidth="0dp">
+
+   </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
 
 
 

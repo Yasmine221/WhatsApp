@@ -1,5 +1,6 @@
 package com.example.whatsapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -64,7 +65,14 @@ public class ChatFragment extends Fragment {
         recyclerView.setAdapter(chatAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
 
+    }
 
+    private void moveToNewActivity () {
+
+        Intent i = new Intent(getActivity(), ChatContentActivity.class);
+        startActivity(i);
+        ((ChatContentActivity) getActivity()).overridePendingTransition(0, 0);
 
     }
+
 }

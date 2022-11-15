@@ -1,7 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/_5sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/call_img"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/user_image">
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/caller_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/call_img"
+        app:layout_constraintBottom_toBottomOf="@id/call_img"
+        app:layout_constraintStart_toEndOf="@id/call_img"
+        android:layout_marginStart="@dimen/_12ssp"
+        android:layout_marginBottom="@dimen/_30ssp"
+        tools:text="username"
+        android:textSize="@dimen/_14ssp"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-black">
+    </com.google.android.material.textview.MaterialTextView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/call_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/call_img"
+        app:layout_constraintBottom_toBottomOf="@id/call_img"
+        app:layout_constraintStart_toEndOf="@id/call_img"
+        android:layout_marginTop="@dimen/_20ssp"
+        android:layout_marginStart="@dimen/_12ssp"
+        android:textSize="@dimen/_12ssp"
+        tools:text=" Today, 10:40 AM ">
+
+    </com.google.android.material.textview.MaterialTextView>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_call_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#09887B"
+        tools:ignore="TouchTargetSizeCheck"
+        android:contentDescription="@string/app_name"/>
+
+
+    <View
+        android:id="@+id/call_viewline"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2ssp"
+        app:layout_constraintTop_toTopOf="@id/call_img"
+        android:layout_marginTop="@dimen/_45ssp"
+        android:background="#EFEFEF">
+
+
+    </View>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,6 +1,10 @@
+package com.example.whatsapp;
+
 public class ChatModel {
     private String Message;
     private String SenderID;
+
+    public ChatModel() {}
 
     public ChatModel(String message, String senderID) {
         Message = message;

@@ -16,6 +16,10 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    buildFeatures {
+        viewBinding true
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -43,10 +47,13 @@ dependencies {
     //firebase
     implementation platform('com.google.firebase:firebase-bom:30.4.1')
     implementation 'com.google.firebase:firebase-analytics'
+    //realtime
+    implementation 'com.google.firebase:firebase-database'
     //login_with_phone
     implementation 'com.google.firebase:firebase-auth'
-    //story implementation
-    implementation 'com.github.bxute:StoryView:v1.0'
+
+
+
 
 
 

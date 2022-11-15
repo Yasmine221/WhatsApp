@@ -1,13 +1,12 @@
+package com.example.whatsapp;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.example.whatsapp.R;
 
 import java.util.ArrayList;
 
@@ -22,7 +21,7 @@ public class RecyclerAdapterChat extends RecyclerView.Adapter<RecyclerAdapterCha
     @Override
     public Holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_container_sent_message,parent,false);
+                .inflate(R.layout.activity_chat_content,parent,false);
         return new Holder(view);
     }
 
@@ -30,6 +29,14 @@ public class RecyclerAdapterChat extends RecyclerView.Adapter<RecyclerAdapterCha
     public void onBindViewHolder(@NonNull Holder holder, int position) {
         ChatModel chatModel = list.get(position);
         holder.sendMessage.setText(chatModel.getMessage());
+
+        if (chatModel.getSenderID().equals(ChatContentActivity.userID)){
+
+            holder.equals(R.layout.item_container_sent_message);
+        }
+        else {
+            holder.equals(R.layout.item_container_recieved_message);
+        }
 
     }
 
