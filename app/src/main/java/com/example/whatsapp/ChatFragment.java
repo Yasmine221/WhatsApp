@@ -61,18 +61,21 @@ public class ChatFragment extends Fragment {
 
 
         recyclerView = view.findViewById(R.id.recycler_view);
-        chatAdapter = new ChatAdapter(data);
+        chatAdapter = new ChatAdapter(data,this::onChatClick);
         recyclerView.setAdapter(chatAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
 
-    }
-
-    private void moveToNewActivity () {
-
-        Intent i = new Intent(getActivity(), ChatContentActivity.class);
-        startActivity(i);
-        ((ChatContentActivity) getActivity()).overridePendingTransition(0, 0);
 
     }
+
+    private void onChatClick(ChatData chatData) {
+        startActivity(new Intent(requireActivity(),ChatContentActivity.class));
+    }
+
+    //private void moveToNewActivity () {
+        //Intent i = new Intent(getActivity(), ChatContentActivity.class);
+        //startActivity(i);
+       // ((ChatContentActivity) getActivity()).overridePendingTransition(0, 0);
+    //}
 
 }

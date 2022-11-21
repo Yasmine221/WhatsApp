@@ -26,6 +26,7 @@
         <entry key="..\:/Users/fg/AndroidStudioProjects/WhatsApp/app/src/main/res/layout/item_chat.xml" value="0.18" />
         <entry key="..\:/Users/fg/AndroidStudioProjects/WhatsApp/app/src/main/res/layout/item_container_recieved_message.xml" value="0.203125" />
         <entry key="..\:/Users/fg/AndroidStudioProjects/WhatsApp/app/src/main/res/layout/item_container_sent_message.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/fg/AndroidStudioProjects/WhatsApp/app/src/main/res/layout/item_sent_message_layout.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/fg/AndroidStudioProjects/WhatsApp/app/src/main/res/layout/item_status_layout.xml" value="0.203125" />
         <entry key="..\:/Users/fg/AndroidStudioProjects/WhatsApp/app/src/main/res/layout/menu.xml" value="0.1287568306010929" />
         <entry key="..\:/Users/fg/AndroidStudioProjects/WhatsApp/app/src/main/res/layout/sent_message_container_item.xml" value="0.203125" />

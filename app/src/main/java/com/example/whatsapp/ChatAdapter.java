@@ -15,10 +15,12 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatHolder>{
 
     private List<ChatData> data;
-
-    public ChatAdapter(List<ChatData> data) {
+    private ChatClickListener chatClickListener;
+    public ChatAdapter(List<ChatData> data, ChatClickListener chatClickListener) {
         this.data = data;
+        this.chatClickListener = chatClickListener;
     }
+
 
     @NonNull
     @Override
@@ -49,7 +51,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatHolder>{
 
     }
 
-    static class ChatHolder extends RecyclerView.ViewHolder {
+    class ChatHolder extends RecyclerView.ViewHolder {
         CircleImageView userImage;
         TextView userName;
         TextView userMessage;
@@ -62,6 +64,16 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatHolder>{
             userName = itemView.findViewById(R.id.user_name);
             userMessage = itemView.findViewById(R.id.user_msg);
 
+            itemView.getRootView().setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    chatClickListener.onChatClick(data.get(getLayoutPosition()));
+                }
+            });
         }
+    }
+
+    public interface ChatClickListener{
+        void onChatClick(ChatData chatData);
     }
 }

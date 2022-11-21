@@ -19,7 +19,8 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 public class ChatContentActivity extends AppCompatActivity {
-    public final static String userID = "VX3ykLUG7JQXFAGvmyMiRlxqQ1c2)";
+
+    public final static String userID ="VX3ykLUG7JQXFAGvmyMiRlxqQ1c2";
     EditText chatText;
     FrameLayout sendButton;
     RecyclerView recyclerView;
@@ -41,7 +42,6 @@ public class ChatContentActivity extends AppCompatActivity {
                 String message = chatText.getText().toString().trim();
                 if(!message.isEmpty())
                     sendMessage(message);
-
             }
         });
 

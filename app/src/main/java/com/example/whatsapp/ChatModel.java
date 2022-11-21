@@ -4,11 +4,10 @@ public class ChatModel {
     private String Message;
     private String SenderID;
 
-    public ChatModel() {}
-
     public ChatModel(String message, String senderID) {
         Message = message;
         SenderID = senderID;
+
     }
 
     public String getMessage() {
